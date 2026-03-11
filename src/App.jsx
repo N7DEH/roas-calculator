@@ -336,6 +336,8 @@ export default function ROASCalculator() {
           .metrics-grid-2{grid-template-columns:1fr!important;}
           .strip-grid{grid-template-columns:1fr 1fr!important;}
           .cta-row{flex-direction:column!important;}
+          .outer-wrap{padding-left:0.25rem!important;padding-right:0.25rem!important;}
+          .inner-pad{padding:1.1rem 0.75rem!important;}
         }
         @media(max-width:480px){
           .metrics-grid-3{grid-template-columns:1fr!important;}
@@ -347,7 +349,7 @@ export default function ROASCalculator() {
         background:"radial-gradient(circle,rgba(235,207,206,.035) 0%,transparent 70%)",
         pointerEvents:"none",zIndex:0 }}/>
 
-      <div style={{ position:"relative",zIndex:1,maxWidth:1100,margin:"0 auto",padding:"0 1.25rem 5rem" }}>
+      <div className="outer-wrap" style={{ position:"relative",zIndex:1,maxWidth:1100,margin:"0 auto",padding:"0 1.25rem 5rem" }}>
 
         {/* ── HEADER ── */}
         <header style={{ padding:"2.2rem 0 2rem", borderBottom:`1px solid ${C.line}` }}>
@@ -384,7 +386,7 @@ export default function ROASCalculator() {
         <div className="main-grid" style={{ marginTop:2 }}>
 
           {/* LEFT: INPUTS */}
-          <div style={{ background:"rgba(255,255,255,.012)", padding:"1.8rem",
+          <div className="inner-pad" style={{ background:"rgba(255,255,255,.012)", padding:"1.8rem",
             borderLeft:`1px solid ${C.line}`, borderBottom:`1px solid ${C.line}` }}>
 
             <SectionDivider title="Your Product" />
@@ -515,7 +517,7 @@ export default function ROASCalculator() {
           </div>
 
           {/* RIGHT: OUTPUTS */}
-          <div style={{ background:"rgba(255,255,255,.008)", padding:"1.8rem",
+          <div className="inner-pad" style={{ background:"rgba(255,255,255,.008)", padding:"1.8rem",
             borderRight:`1px solid ${C.line}`, borderBottom:`1px solid ${C.line}` }}>
 
             {/* Verdict */}
